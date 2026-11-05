@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import { ArrowRight, Sparkles } from "lucide-react"
+import { ArrowRight, LayoutDashboard } from "lucide-react"
 import { ActionList } from "react-data-form"
 import { generateLinkByResource, Link, type ViewResource } from "react-resource-view"
 import { definePage, useCssVar } from "@/lib/doc"
@@ -19,7 +19,7 @@ const surfaces = ["background", "card", "muted", "accent", "foreground", "muted-
 const roles = ["primary", "success", "info", "glory", "warning", "destructive"]
 
 const typeScale = [
-  { size: "36", weight: "Extrabold", className: "font-heading text-4xl font-extrabold tracking-tight", sample: "Système visuel" },
+  { size: "36", weight: "Semibold", className: "font-heading text-4xl", sample: "Système visuel" },
   { size: "20", weight: "Regular", className: "text-xl", sample: "Une famille de produits" },
   { size: "14", weight: "Regular", className: "text-sm", sample: "Texte courant, pour tout ce qui se lit." },
   { size: "12", weight: "Regular", className: "text-xs text-muted-foreground", sample: "Légende en gris pierre" },
@@ -88,7 +88,7 @@ export default definePage({
   id: "overview",
   name: "Vue d'ensemble",
   title: "Design system",
-  icon: Sparkles,
+  icon: LayoutDashboard,
   intro:
     "L'ADN visuel d'une agence digitale et de ses produits. Des gris chauds, un orange pour la marque, des composants partagés.",
   view: () => (

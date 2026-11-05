@@ -97,7 +97,7 @@ export default definePage({
             <img src={asset("hermez-logo.svg")} alt="Logo Hermez, version claire" className="h-16" />
           </Example>
           <div className="overflow-hidden rounded-xl border border-border bg-hermez-dark">
-            <p className="border-b border-white/15 px-4 py-2 text-xs font-medium tracking-wide text-white/60 uppercase">
+            <p className="border-b border-white/15 px-4 py-3 text-sm text-white/60">
               Fond sombre
             </p>
             <div className="flex flex-col items-center gap-8 p-6">

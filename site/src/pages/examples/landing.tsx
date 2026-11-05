@@ -9,7 +9,6 @@ import {
   Lock,
   Mic,
   Plus,
-  Sparkles,
   Timer,
 } from "lucide-react"
 import { definePage } from "@/lib/doc"
@@ -135,15 +134,12 @@ function ProductShot() {
           ))}
           <p>
             Côté support, trois tickets restent ouverts
-            <span className="ml-0.5 inline-block h-4 w-0.5 translate-y-0.5 animate-pulse bg-primary" />
+            <span className="ml-0.5 inline-block h-4 w-0.5 translate-y-0.5 bg-primary" />
           </p>
         </div>
         <div className="border-t border-border bg-muted/50 p-5 @3xl:border-t-0 @3xl:border-l">
           <div className="flex items-center gap-2 text-sm font-medium">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-destructive/60" />
-              <span className="relative inline-flex size-2 rounded-full bg-destructive" />
-            </span>
+            <span className="size-2 rounded-full bg-destructive" />
             Écoute en cours
           </div>
           <div className="mt-4 flex h-10 items-center gap-0.5" aria-hidden>
@@ -209,11 +205,8 @@ function Landing() {
 
       {/* Hero */}
       <section className="px-6 pt-16 pb-12 @3xl:px-12 @3xl:pt-24">
-        <Badge variant="outline" className="gap-1.5">
-          <Sparkles className="size-3" />
-          Nouveau : vocabulaire partagé en équipe
-        </Badge>
-        <h1 className="mt-5 max-w-2xl text-4xl font-semibold tracking-tight text-balance @3xl:text-5xl">
+        <p className="text-sm text-muted-foreground">Vocabulaire partagé en équipe</p>
+        <h1 className="mt-3 max-w-2xl text-4xl font-semibold tracking-tight text-balance @3xl:text-5xl">
           Écrivez à la vitesse où vous parlez.
         </h1>
         <p className="mt-4 max-w-xl text-lg text-muted-foreground text-pretty">
