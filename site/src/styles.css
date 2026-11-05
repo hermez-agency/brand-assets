@@ -22,7 +22,7 @@
 /*
  * Le thème du site : celui du portfolio de l'agence. Des gris « stone »
  * chauds, l'orange de la marque (#e46212, en 600 sous un texte blanc pour le
- * contraste), Bricolage Grotesque très gras pour les titres et la police du
+ * contraste), Bricolage Grotesque en semi-gras pour les titres et la police du
  * système pour le texte. Clair seulement, comme le portfolio.
  */
 :root {
@@ -32,8 +32,8 @@
   --typeface-heading: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
   --typeface-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --typeface-mono: ui-monospace, Menlo, Consolas, monospace;
-  --heading-weight: 800;
-  --heading-tracking: -0.025em;
+  --heading-weight: 600;
+  --heading-tracking: -0.02em;
 
   /* Logo Hermez : couleurs et police du logotype (voir la page « Logo Hermez ») */
   --typeface-logo: 'Outfit', ui-sans-serif, system-ui, sans-serif;
@@ -175,7 +175,6 @@
   --shadow-sm: 0 1px 2px 0 rgb(var(--shadow-color) / calc(var(--shadow-strength) * 0.8));
   --shadow-md: 0 4px 12px -2px rgb(var(--shadow-color) / var(--shadow-strength));
   --shadow-lg: 0 12px 28px -6px rgb(var(--shadow-color) / calc(var(--shadow-strength) * 1.2));
-  --shadow-glow: 0 0 32px -4px color-mix(in srgb, var(--primary) 35%, transparent);
 }
 
 @layer base {

@@ -50,7 +50,7 @@ export function Example({
 }) {
   return (
     <div className="overflow-hidden rounded-xl border border-border bg-card">
-      <p className="border-b border-border px-4 py-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+      <p className="border-b border-border px-4 py-3 text-sm text-muted-foreground">
         {label}
       </p>
       <div className={`p-6 ${className}`}>{children}</div>

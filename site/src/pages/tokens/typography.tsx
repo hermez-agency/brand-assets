@@ -107,7 +107,7 @@ export default definePage({
             Le texte courant reste lisible : quatorze pixels, interligne généreux, une
             mesure qui ne dépasse pas soixante-dix caractères.
           </p>
-          <p className="mt-4 text-xs uppercase tracking-wide text-muted-foreground">
+          <p className="mt-4 text-xs text-muted-foreground">
             Légende
           </p>
         </Example>
