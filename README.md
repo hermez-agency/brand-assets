@@ -27,7 +27,7 @@ Un seul système visuel : celui du portfolio Hermez.
 La DA est celle du portfolio de l'agence (<https://hermez.dev>), reprise de `site/src/styles.css`, seule source des tokens :
 
 - **Logo Hermez** : le h et son point en carré arrondi bordé d'orange (variante 4D « contour »), « hermez » en Outfit 700
-- **Fond** : clair, « stone » — `#fafaf9` (page), `#ffffff` (cartes), bordures `#e7e5e4`. Le sombre n'existe pas
+- **Fond** : clair, « stone » — `#fafaf9` (page), `#ffffff` (cartes), bordures `#e7e5e4`. Le thème sombre n'existe que pour le kit de chat IA
 - **Orange Hermez** : `#e8611a` (logo, glyphes et halo), `#e46212` (anneau de focus), `#bf4a02` sous un texte blanc ; encre `#18181b` / `#1c1917`, texte secondaire `#57534e`
 - **Polices** : Bricolage Grotesque 800 pour les titres et les noms (Fontsource), Outfit 700 pour le logotype Hermez seul. Le texte courant prend la police du système sur le site ; les visuels, eux, composent le sous-titre en Bricolage 500 pour que le rendu ne dépende pas de la machine
 - **Arrondis** : base `0.75rem` ; carré d'icône à 22,5 % de rayon
