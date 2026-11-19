@@ -5,7 +5,8 @@
  * (1536 × 672) et `card.png` (1280 × 600, le 32:15 des cards du portfolio),
  * plus la planche `../previews/products.png`. Pour Hermez, les visuels de la
  * page LinkedIn dans `../projects/hermez/` : `linkedin-logo.png` (300 × 300) et
- * `linkedin-banner.png` (1128 × 191).
+ * `linkedin-banner.png` (1128 × 191), plus `linkedin-profile-banner.png`
+ * (1584 × 396) pour les profils personnels, même gabarit agrandi.
  *
  * Chaque visuel est une page HTML (polices Fontsource du site, mascotte ou
  * glyphe de `scripts/visuals/`) que Chrome sans tête photographie : le nom du
@@ -143,15 +144,25 @@ function linkedinLogo(): string {
   </style><div class="frame"><img src="${symbol}" alt=""></div>`
 }
 
-/** Bannière de la page LinkedIn : le logo à droite, la photo de la page recouvre le coin bas gauche. */
-function linkedinBanner(): string {
+/** Gabarit des bannières LinkedIn : le logo à droite, sur un fond clair à lueur orange en bas à droite. */
+interface LinkedinFormat { width: number; height: number; pad: number; logo: number; gap: number; tagline: number }
+
+function linkedinTemplate(f: LinkedinFormat): string {
   return `<style>${css}
-    .frame { width: 1128px; height: 191px; padding: 0 72px; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 10px;
+    .frame { width: ${f.width}px; height: ${f.height}px; padding: 0 ${f.pad}px; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: ${f.gap}px;
       background: radial-gradient(60% 90% at 100% 100%, ${hex(orange, 0.18)}, transparent 70%), #fafaf9; }
-    .frame img { display: block; height: 64px; }
-    .tagline { font-size: 22px; font-weight: 500; color: #57534e; }
+    .frame img { display: block; height: ${f.logo}px; }
+    .tagline { font-size: ${f.tagline}px; font-weight: 500; color: #57534e; }
   </style><div class="frame"><img src="${logo}" alt=""><p class="tagline">Digital agency</p></div>`
 }
+
+/** Bannière de la page LinkedIn (1128 × 191) : la photo de la page recouvre le coin bas gauche. */
+const linkedinBannerFormat: LinkedinFormat = { width: 1128, height: 191, pad: 72, logo: 64, gap: 10, tagline: 22 }
+const linkedinBanner = () => linkedinTemplate(linkedinBannerFormat)
+
+/** Bannière d'un profil personnel LinkedIn (1584 × 396, 4:1) : même gabarit agrandi, la photo de profil recouvre le coin bas gauche. */
+const linkedinProfileBannerFormat: LinkedinFormat = { width: 1584, height: 396, pad: 110, logo: 92, gap: 14, tagline: 31 }
+const linkedinProfileBanner = () => linkedinTemplate(linkedinProfileBannerFormat)
 
 function sheet(): string {
   const cells = products.map((p) => {
@@ -197,8 +208,9 @@ try {
   }
   const hermez = path(new URL("projects/hermez/", repo))
   shoot(linkedinLogo(), join(hermez, "linkedin-logo.png"), 300, 300, work)
-  shoot(linkedinBanner(), join(hermez, "linkedin-banner.png"), 1128, 191, work)
-  console.log("hermez: linkedin-logo, linkedin-banner")
+  shoot(linkedinBanner(), join(hermez, "linkedin-banner.png"), linkedinBannerFormat.width, linkedinBannerFormat.height, work)
+  shoot(linkedinProfileBanner(), join(hermez, "linkedin-profile-banner.png"), linkedinProfileBannerFormat.width, linkedinProfileBannerFormat.height, work)
+  console.log("hermez: linkedin-logo, linkedin-banner, linkedin-profile-banner")
   mkdirSync(path(new URL("previews/", repo)), { recursive: true })
   shoot(sheet(), path(new URL("previews/products.png", repo)), 2400, 3340, work)
   console.log("previews/products.png")
