@@ -11,7 +11,7 @@ Un seul système visuel : celui du portfolio Hermez.
 - **Nom** : « Hermez » en anglais, « Hermez agency » quand il faut préciser
 - **Logo** : un h et son point dans un carré arrondi bordé d'orange (variante 4D « contour »), suivi de « hermez » en Outfit 700. Fichiers SVG (texte vectorisé), PNG, favicon et image de partage dans `site/public/hermez/`, publiés sur <https://hermez.dev/brand-assets/hermez/> (ex. `hermez-logo.svg`, `hermez-symbol.svg`) ; règles d'usage sur la page « Logo Hermez » du site. Couleurs : orange `#e8611a` (`#f2803f` sur fond sombre), encre `#18181b`, fond sombre `#141414`
 - **Visuels** : `projects/hermez/icon.png` (1024 × 1024) et `banner.png` (1536 × 672) reprennent le logo du portfolio, orange sur fond clair `#fafaf9`, sous-titre en gris pierre
-- **LinkedIn** : `projects/hermez/linkedin-logo.png` (300 × 300, le symbole) et `linkedin-banner.png` (1128 × 191, le logo à droite, hors de la photo de la page), générés par `pnpm visuals:build`
+- **LinkedIn** : `projects/hermez/linkedin-logo.png` (300 × 300, le symbole) et `linkedin-banner.png` (1128 × 191, le logo à droite, hors de la photo de la page) pour la page entreprise, et `linkedin-profile-banner.png` (1584 × 396, même gabarit) pour les profils personnels, générés par `pnpm visuals:build`
 - **Logos obsolètes** : le « C » de l'agence Cardona et le H à trois plumes d'aile sur fond bleu nuit (ancien `projects/hermez/icon.png`, supprimé) ne sont plus le logo actuel ; ne plus les reprendre
 - **Signature** : en pied de page de chaque produit, en texte et en anglais :
 

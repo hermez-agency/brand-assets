@@ -46,6 +46,8 @@ projects/
     banner.png
 ```
 
+Le dossier `projects/hermez/` a ses visuels LinkedIn : `linkedin-logo.png` (300 × 300), `linkedin-banner.png` (1128 × 191, page entreprise) et `linkedin-profile-banner.png` (1584 × 396, profils personnels), tous par `pnpm visuals:build`.
+
 Chaque projet a son propre dossier sous `projects/`, nommé exactement comme le dépôt GitHub correspondant (ex. `trader-ia`, `react-data-form`). Ce dossier contient `icon.png` et `banner.png` ; les six produits refaits ont aussi `icon.svg` (aussi le favicon SVG) et `favicon-32|180|512.png`, produits par `pnpm visuals:build`.
 
 ## Conventions
