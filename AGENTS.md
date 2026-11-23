@@ -31,6 +31,10 @@ Il n'y a ni test ni lint.
 - Registry shadcn : `registry.json` déclare les items, `scripts/build-registry.ts` les construit. Les tokens (`registry:theme`) et les règles de base (`registry:style`) sont relus dans `styles.css` et `fonts.ts`, jamais recopiés dans `registry.json`. Un composant ajouté à `src/ui` s'ajoute aussi à `registry.json`.
 - Communication abstraite : une agence digitale avec plusieurs produits, sans mettre un nom de personne en avant.
 
+## Illustrations d'articles
+
+Base commune aux blogs Hermez (portfolio, Ponos, React Resource View, Leadz) : SVG 16:9 plats, sans texte ni logo ni personnage. Les palettes (7 rôles, clair et sombre, par marque) sont dans `site/src/illustrations/palettes.ts`, seule source ; l'outil `pnpm illustrations template|check|rasterize` (`site/scripts/illustrations.ts`, sharp) vérifie la grammaire et produit AVIF/WebP 480 et 960 px et le JPEG de partage 1200 × 630 ; les autres dépôts l'appellent en commande depuis un clone de brand-assets (pas de paquet). La skill est `skills/illustrations-article/SKILL.md`, les exemples dans `site/src/illustrations/examples/` (une galerie sur la page « Illustrations d'articles »). Changer une palette ou une règle, c'est le faire ici et mettre à jour la page, l'outil et la skill ensemble.
+
 ## Génération des visuels
 
 Les visuels des produits refaits (Ponos, Leadz, react-resource-view, react-data-form, Whisper Desk, Opoil) sont dessinés en HTML et photographiés par Chrome sans tête : `cd site && pnpm visuals:build` (`site/scripts/build-visuals.ts`, mascottes et glyphes dans `site/scripts/visuals/`). Ajouter un produit, c'est ajouter une ligne à `products` et son SVG. Ponos fait exception : son icône est le logo A « Écran » (`logoPonos()`), sa mascotte à plat (`ponos.svg`) n'est pas dans les visuels. Les autres projets gardent leurs anciennes images, générées à la main avec `google/gemini-2.5-flash-image` via OpenRouter, en attendant leur ticket.

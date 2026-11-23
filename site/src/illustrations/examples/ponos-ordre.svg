@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Des tuiles éparpillées entrent par un rail dans un écran où les lignes sont rangées" data-brand="ponos" stroke-linecap="round" stroke-linejoin="round">
+<style>
+svg[data-brand="ponos"]{--ill-bg:#f5f2ef;--ill-surface:#e9e4df;--ill-line:#cdc6bf;--ill-ink:#1c1917;--ill-mute:#9a928a;--ill-accent:#e8611a;--ill-soft:#f8d5bf}
+@media (prefers-color-scheme:dark){svg[data-brand="ponos"]{--ill-bg:#17140f;--ill-surface:#26211c;--ill-line:#413a33;--ill-ink:#f5f2ef;--ill-mute:#7d746a;--ill-accent:#f2803f;--ill-soft:#4a2a16}}
+.dark svg[data-brand="ponos"]{--ill-bg:#17140f;--ill-surface:#26211c;--ill-line:#413a33;--ill-ink:#f5f2ef;--ill-mute:#7d746a;--ill-accent:#f2803f;--ill-soft:#4a2a16}
+.light svg[data-brand="ponos"]{--ill-bg:#f5f2ef;--ill-surface:#e9e4df;--ill-line:#cdc6bf;--ill-ink:#1c1917;--ill-mute:#9a928a;--ill-accent:#e8611a;--ill-soft:#f8d5bf}
+</style>
+<rect width="1600" height="900" fill="var(--ill-bg)"/>
+<g fill="var(--ill-surface)" stroke="var(--ill-line)" stroke-width="4">
+<rect x="180" y="250" width="120" height="120" rx="24" transform="rotate(-12 240 310)"/>
+<rect x="400" y="170" width="96" height="96" rx="24" transform="rotate(14 448 218)"/>
+<rect x="290" y="480" width="150" height="104" rx="24" transform="rotate(8 365 532)"/>
+<rect x="520" y="400" width="96" height="96" rx="24" transform="rotate(-18 568 448)"/>
+<rect x="200" y="660" width="96" height="96" rx="24" transform="rotate(20 248 708)"/>
+</g>
+<g fill="var(--ill-mute)"><circle cx="500" cy="640" r="14"/><circle cx="600" cy="230" r="10"/></g>
+<line x1="690" y1="450" x2="940" y2="450" stroke="var(--ill-line)" stroke-width="8"/>
+<circle cx="690" cy="450" r="14" fill="var(--ill-mute)"/>
+<rect x="960" y="250" width="440" height="400" rx="40" fill="var(--ill-surface)" stroke="var(--ill-ink)" stroke-width="8"/>
+<line x1="1030" y1="340" x2="1250" y2="340" stroke="var(--ill-line)" stroke-width="12"/>
+<line x1="1030" y1="450" x2="1330" y2="450" stroke="var(--ill-line)" stroke-width="12"/>
+<rect x="1030" y="530" width="200" height="40" rx="20" fill="var(--ill-accent)"/>
+<circle cx="1330" cy="550" r="26" fill="var(--ill-soft)" stroke="var(--ill-accent)" stroke-width="8"/>
+<circle cx="940" cy="450" r="14" fill="var(--ill-accent)"/>
+</svg>
