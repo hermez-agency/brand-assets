@@ -9,6 +9,7 @@ import { ChatHistory } from "@/ui/chat-history"
 import { ChatCodeBlock, ChatMarkdown } from "@/ui/chat-markdown"
 import { ChatMessage } from "@/ui/chat-message"
 import { ChatModelSelector } from "@/ui/chat-model-selector"
+import { AgentStep } from "@/ui/chat-step"
 import { TextPartView, ThinkingPartView, ToolApproval, ToolCallPartView, ToolResultPartView } from "@/ui/chat-parts"
 import type { ChatConversationSummary, ChatMessageData, ChatModel, ToolCallPart, ToolResultPart } from "@/ui/chat-types"
 import { CodeBlock, definePage, Example, Section } from "@/lib/doc"
@@ -50,6 +51,25 @@ const failedResult: ToolResultPart = {
   content: "",
   error: "Le service leadz-api ne répond pas (délai dépassé après 30 s).",
 }
+
+const step = (id: string, name: string, args: string, state: ToolCallPart["state"]): ToolCallPart => ({ type: "tool-call", id, name, arguments: args, state })
+const stepResult = (id: string, content: string, state: ToolResultPart["state"] = "complete", error?: string): ToolResultPart => ({ type: "tool-result", toolCallId: id, state, content, error })
+
+const steps: { call: ToolCallPart; result?: ToolResultPart }[] = [
+  { call: step("s1", "Read", '{"file_path":"site/src/styles.css"}', "input-complete"), result: stepResult("s1", "@import \"tailwindcss\";") },
+  { call: step("s2", "Grep", '{"pattern":"useCssVar"}', "input-complete"), result: stepResult("s2", "src/pages/tokens/colors.tsx:12") },
+  {
+    call: step("s3", "Bash", '{"command":"ponos tickets list --status open","description":"Liste les tickets ouverts"}', "input-complete"),
+    result: stepResult("s3", '["BA-12","BA-9"]'),
+  },
+  { call: step("s4", "Bash", '{"command":"pnpm build","description":"Construit le site"}', "input-complete") },
+  {
+    call: step("s5", "Edit", '{"file_path":"site/src/ui/chat-step.tsx"}', "input-complete"),
+    result: stepResult("s5", "", "error", "Le texte à remplacer est introuvable dans le fichier."),
+  },
+  { call: step("s6", "mcp__claude-in-chrome__navigate", '{"url":"https://hermez.dev"}', "input-complete"), result: stepResult("s6", "Page chargée.") },
+  { call: step("s7", "compute_invoice", '{"customer":"acme"}', "input-complete"), result: stepResult("s7", '{"total":120}') },
+]
 
 const answer = `Voici les **tickets ouverts**, du plus récent au plus ancien :
 
@@ -211,6 +231,26 @@ const demos: { label: string; node: ReactNode }[] = [
         <ToolCallPartView part={lookupCall} result={lookupResult} />
         <ToolCallPartView part={call("input-complete")} result={failedResult} />
       </div>
+    ),
+  },
+  {
+    label: "Étapes d'agent : fermées par défaut, une en cours, une en erreur, un outil inconnu",
+    node: (
+      <div className="space-y-2">
+        {steps.map((step) => (
+          <AgentStep key={step.call.id} part={step.call} result={step.result} />
+        ))}
+      </div>
+    ),
+  },
+  {
+    label: "Étapes d'agent : table de titres personnalisée",
+    node: (
+      <AgentStep
+        part={step("c9", "search_tickets", '{"status":"open"}', "input-complete")}
+        result={lookupResult}
+        titles={{ search_tickets: "Cherche dans les tickets ouverts" }}
+      />
     ),
   },
   {
