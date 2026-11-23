@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Des tuiles éparpillées convergent par un rail vers un cercle ordonné" data-brand="hermez" stroke-linecap="round" stroke-linejoin="round">
+<style>
+svg[data-brand="hermez"]{--ill-bg:#fafaf9;--ill-surface:#f0eeec;--ill-line:#d6d3d1;--ill-ink:#1c1917;--ill-mute:#a8a29e;--ill-accent:#e8611a;--ill-soft:#fbdcc8}
+@media (prefers-color-scheme:dark){svg[data-brand="hermez"]{--ill-bg:#141414;--ill-surface:#201d1b;--ill-line:#3a3633;--ill-ink:#fafaf9;--ill-mute:#78716c;--ill-accent:#f2803f;--ill-soft:#43271a}}
+.dark svg[data-brand="hermez"]{--ill-bg:#141414;--ill-surface:#201d1b;--ill-line:#3a3633;--ill-ink:#fafaf9;--ill-mute:#78716c;--ill-accent:#f2803f;--ill-soft:#43271a}
+.light svg[data-brand="hermez"]{--ill-bg:#fafaf9;--ill-surface:#f0eeec;--ill-line:#d6d3d1;--ill-ink:#1c1917;--ill-mute:#a8a29e;--ill-accent:#e8611a;--ill-soft:#fbdcc8}
+</style>
+<rect width="1600" height="900" fill="var(--ill-bg)"/>
+<g fill="var(--ill-surface)" stroke="var(--ill-line)" stroke-width="4">
+<rect x="180" y="250" width="120" height="120" rx="24" transform="rotate(-12 240 310)"/>
+<rect x="400" y="170" width="96" height="96" rx="24" transform="rotate(14 448 218)"/>
+<rect x="290" y="480" width="150" height="104" rx="24" transform="rotate(8 365 532)"/>
+<rect x="520" y="400" width="96" height="96" rx="24" transform="rotate(-18 568 448)"/>
+<rect x="200" y="660" width="96" height="96" rx="24" transform="rotate(20 248 708)"/>
+</g>
+<g fill="var(--ill-mute)"><circle cx="500" cy="640" r="14"/><circle cx="600" cy="230" r="10"/></g>
+<line x1="690" y1="450" x2="940" y2="450" stroke="var(--ill-line)" stroke-width="8"/>
+<circle cx="690" cy="450" r="14" fill="var(--ill-mute)"/>
+<circle cx="1180" cy="450" r="230" fill="var(--ill-soft)"/>
+<circle cx="1180" cy="450" r="170" fill="none" stroke="var(--ill-ink)" stroke-width="12"/>
+<circle cx="1180" cy="450" r="64" fill="var(--ill-accent)"/>
+<circle cx="940" cy="450" r="14" fill="var(--ill-accent)"/>
+</svg>

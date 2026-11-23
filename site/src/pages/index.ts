@@ -3,6 +3,7 @@ import type { ScopeMenuEntry } from "react-resource-view"
 import { componentResources } from "./components"
 import chatResource from "./components/chat"
 import bloggingResource from "./guides/blogging"
+import illustrationsResource from "./guides/illustrations"
 import logoHermez from "./identity/logo-hermez"
 import landingResource from "./examples/landing"
 import overviewResource from "./overview"
@@ -18,7 +19,7 @@ import typography from "./tokens/typography"
 
 const tokenResources = [colors, brandColors, typography, spacing, radius, shadows, motion]
 const identityResources = [logoHermez]
-const guideResources = [bloggingResource]
+const guideResources = [bloggingResource, illustrationsResource]
 const kitResources = [chatResource]
 const implementationResources = [listsResource, adminResource]
 const exampleResources = [landingResource]
