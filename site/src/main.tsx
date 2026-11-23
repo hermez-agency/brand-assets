@@ -39,6 +39,7 @@ const scope: ScopeInterface = {
   menu,
   decoratorComponent: createAdminLayout({
     logo: <Logo />,
+    commandPalette: { searchable: true },
     footerMenu: [
       {
         name: "Brand Assets",
