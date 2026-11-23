@@ -478,6 +478,27 @@
       ]
     },
     {
+      "name": "chat-step",
+      "type": "registry:ui",
+      "title": "Chat IA : étape d'agent",
+      "description": "Un appel d'outil et son résultat dans un seul item repliable, fermé par défaut, avec un titre en clair par outil (table configurable) et l'état.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "hermez",
+        "cn",
+        "chat-parts",
+        "chat-types"
+      ],
+      "files": [
+        {
+          "path": "src/ui/chat-step.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "chat-message",
       "type": "registry:ui",
       "title": "Chat IA : message",
@@ -620,6 +641,7 @@
         "chat-types",
         "chat-markdown",
         "chat-parts",
+        "chat-step",
         "chat-message",
         "chat-composer",
         "chat-conversation",
